@@ -4,36 +4,34 @@ from workflow import approve_request, issue_card, return_card
 
 def show_menu():
     print("\n===== CAMPUS ACCESS SYSTEM =====")
-    print("1. View card requests")
-    print("2. Approve a request")
-    print("3. Issue a card")
-    print("4. Return a card")
-    print("5. Exit")
-
-
-def view_requests(requests):
-    if not requests:
-        print("No card requests found.")
-        return
-
-    for request in requests:
-        print(f"\nRequest ID: {request['id']}")
-        print(f"Fellow ID: {request['fellow_id']}")
-        print(f"Card Type: {request['card_type']}")
-        print(f"Status: {request['status']}")
-        print(f"Approved By: {request['approved_by']}")
+    print("1. Create request ticket")
+    print("2. View requests")
+    print("3. Approve request")
+    print("4. Issue card")
+    print("5. Return card")
+    print("6. Exit")
 
 
 def main():
-    requests = [
-        {
-            "id": "A001",
-            "fellow_id": "F001",
-            "card_type": "visitor",
-            "status": "requested",
-            "approved_by": None
-        }
-    ]
+    store = RequestStore()
+
+    while True:
+        show_menu()
+        choice = input("Choose an option: ").strip()
+
+        if choice == "1":
+            create_request_ticket(store)
+
+        elif choice == "2":
+            for request in store.list_requests():
+                print(request)
+
+        elif choice == "6":
+            print("Goodbye!")
+            break
+
+        else:
+            print("Invalid option or option not yet connected.")
 
     while True:
         show_menu()
