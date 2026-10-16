@@ -22,16 +22,17 @@ python3 -m unittest discover -s tests -p "test_workflow.py" -k test_cannot_appro
 ```
 
 **Verification:** [Paste your actual test output here.]
-test_approve (test_workflow.WorkflowTests.test_approve) ... ok
-test_blank_and_unauthorized (test_workflow.WorkflowTests.test_blank_and_unauthorized) ... ok
-test_full_workflow (test_workflow.WorkflowTests.test_full_workflow) ... ok
-test_no_early_issue_or_return (test_workflow.WorkflowTests.test_no_early_issue_or_return) ... ok
-test_no_second_approval (test_workflow.WorkflowTests.test_no_second_approval) ... ok
-test_returned_is_final (test_workflow.WorkflowTests.test_returned_is_final) ... ok
-test_unknown_and_malformed (test_workflow.WorkflowTests.test_unknown_and_malformed) ... ok
+test_approve_request (test_workflow.TestWorkflow.test_approve_request) ... ok
+test_blank_approver_is_rejected (test_workflow.TestWorkflow.test_blank_approver_is_rejected) ... ok
+test_cannot_approve_twice (test_workflow.TestWorkflow.test_cannot_approve_twice) ... ok
+test_cannot_issue_before_approval (test_workflow.TestWorkflow.test_cannot_issue_before_approval) ... ok
+test_cannot_issue_returned_card (test_workflow.TestWorkflow.test_cannot_issue_returned_card) ... ok
+test_cannot_return_twice (test_workflow.TestWorkflow.test_cannot_return_twice) ... ok
+test_complete_workflow (test_workflow.TestWorkflow.test_complete_workflow) ... ok
+test_unknown_request_is_rejected (test_workflow.TestWorkflow.test_unknown_request_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.008s
+Ran 8 tests in 0.001s
 
 OK
 
@@ -62,16 +63,17 @@ python3 -m unittest discover -s tests -p "test_workflow.py" -k test_cannot_issue
 ```
 
 **Verification:** 
-test_approve (test_workflow.WorkflowTests.test_approve) ... ok
-test_blank_and_unauthorized (test_workflow.WorkflowTests.test_blank_and_unauthorized) ... ok
-test_full_workflow (test_workflow.WorkflowTests.test_full_workflow) ... ok
-test_no_early_issue_or_return (test_workflow.WorkflowTests.test_no_early_issue_or_return) ... ok
-test_no_second_approval (test_workflow.WorkflowTests.test_no_second_approval) ... ok
-test_returned_is_final (test_workflow.WorkflowTests.test_returned_is_final) ... ok
-test_unknown_and_malformed (test_workflow.WorkflowTests.test_unknown_and_malformed) ... ok
+test_approve_request (test_workflow.TestWorkflow.test_approve_request) ... ok
+test_blank_approver_is_rejected (test_workflow.TestWorkflow.test_blank_approver_is_rejected) ... ok
+test_cannot_approve_twice (test_workflow.TestWorkflow.test_cannot_approve_twice) ... ok
+test_cannot_issue_before_approval (test_workflow.TestWorkflow.test_cannot_issue_before_approval) ... ok
+test_cannot_issue_returned_card (test_workflow.TestWorkflow.test_cannot_issue_returned_card) ... ok
+test_cannot_return_twice (test_workflow.TestWorkflow.test_cannot_return_twice) ... ok
+test_complete_workflow (test_workflow.TestWorkflow.test_complete_workflow) ... ok
+test_unknown_request_is_rejected (test_workflow.TestWorkflow.test_unknown_request_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.008s
+Ran 8 tests in 0.001s
 
 OK
 
@@ -86,8 +88,8 @@ Checking the status inside the function is important because the CLI is not the 
 
 Earlier, I ran the workflow test suite and obtained:
 
-- Tests run: 7
-- Passed: 7
+- Tests run: 8
+- Passed: 8
 - Failed: 0
 
 The tests covered approval, blank approvers, repeated approval, issuing before approval, issuing returned cards, repeated returns, the complete workflow and unknown requests.
