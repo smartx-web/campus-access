@@ -17,7 +17,7 @@
 **Experiment:**
 
 ```bash
-python -m unittest discover -s tests -p "test_workflow.py" -k test_cannot_approve_twice -v
+python3 -m unittest discover -s tests -p "test_workflow.py" -k test_cannot_approve_twice -v
 ```
 
 **Verification:** [Paste your actual test output here.]
@@ -43,7 +43,7 @@ Skipping approval would break the workflow rules.
 **Experiment:**
 
 ```bash
-python -m unittest discover -s tests -p "test_workflow.py" -k test_cannot_issue_before_approval -v
+python3 -m unittest discover -s tests -p "test_workflow.py" -k test_cannot_issue_before_approval -v
 ```
 
 **Verification:** [Paste your actual test output here.]

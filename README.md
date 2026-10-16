@@ -7,11 +7,11 @@ Python standard-library command-line application for campus access cards. It cre
 Python 3.10+; no packages or database required. From the repository root:
 
 ```sh
-python main.py
+python3 main.py
 # Optional alternative JSON file:
-python main.py --file /path/to/requests.json
-python -m unittest discover -s tests -v
-python docs/learning-experiments.py
+python3 main.py --file /path/to/requests.json
+python3 -m unittest discover -s tests -v
+python3 docs/learning-experiments.py
 ```
 
 Choose a menu action 1–9. Create `F001` with card type `visitor`, approve A001 using `M01`, issue it, then return it. `student` and `staff` are also valid card types.

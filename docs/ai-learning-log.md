@@ -7,7 +7,7 @@ Disclosure: these are Codex's implementation experiments, not evidence that Musa
 Question: does Python `\d` accept only digits 0–9?
 AI explanation: Unicode regex digit classes can accept Arabic-Indic digits; use `[0-9]` for this contract.
 Prediction: `A٠٠١` matches `A\d{3}` but fails `A[0-9]{3}`.
-Experiment: `python docs/learning-experiments.py`; explicit assertions compare both patterns. Storage tests also try Arabic-Indic and full-width numerals.
+Experiment: `python3 docs/learning-experiments.py`; explicit assertions compare both patterns. Storage tests also try Arabic-Indic and full-width numerals.
 Verification: assertions passed and malformed IDs were rejected.
 Decision: use explicit ASCII regex plus canonical positive-ID formatting.
 

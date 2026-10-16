@@ -17,7 +17,7 @@ All 25 tests were run successfully on the repair before opening the PR. This is 
 
 ## B's review and learning tasks
 
-1. Check out this branch and run `python -m unittest discover -s tests -v` yourself.
+1. Check out this branch and run `python3 -m unittest discover -s tests -v` yourself.
 2. Explain why workflow functions must call `transition_request`, and why a returned copy cannot update live storage.
 3. Test an unauthorized approver and compare all fields before/after. Test corrupt JSON using a disposable file.
 4. Confirm the demonstration staff allowlist or propose the campus's actual policy.
